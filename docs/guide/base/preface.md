@@ -179,7 +179,7 @@ budwk                               -- 根目录
 * `问答社区` [https://nutz.cn](https://nutz.cn)
 * `Gitee` [https://gitee.com/budwk/budwk/issues](https://gitee.com/budwk/budwk/issues)
 * `Github` [https://github.com/budwk/budwk/issues](https://github.com/budwk/budwk/issues)
-* `QQ群` 24457628
-* `QQ号` 11624317 **商业版用户**:yum:
-* `微信` wizzer **商业版用户**:money_mouth_face:
+* `QQ1群` 68428921(已满)
+* `QQ2群` 24457628
+* `Q号/微信` wizzer **定制开发、企业培训**👌
 
