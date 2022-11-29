@@ -1,5 +1,5 @@
 module.exports = {
-    title: 'BudWk V7',
+    title: 'BudWk V8',
     description: '微服务分布式+API网关+前后端分离开发框架',
     base: '/',
     head: [

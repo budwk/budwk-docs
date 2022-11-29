@@ -6,6 +6,18 @@ pageClass: getting-started
 [![GitHub release](https://img.shields.io/github/release/budwk/budwk.svg)](https://github.com/budwk/budwk/releases)
 [![donate](https://img.shields.io/badge/%24-donate-ff69b4.svg)](https://budwk.com/donation)
 
+
+BudWk 原名 NutzWk ，是基于国产框架 nutzboot 开发的开源 Java企业级Web开发框架，拥有近十年的开源历史，积累了一大批企业和个人用户，历经V1-V8数次迭代。
+
+V8 在 V7具备的API网关、组件库、认证中心、控制中心等功能基础上，进一步对前后端功能进行升级改造、提升用户体验，同时大大减轻开发工作量，提升开发效率，为产品升级迭代提供极大便利。
+
+框架同时提供`微服务单应用`及`微服务分布式`版本供选择，后台集权限体系、系统参数、数据字典、站内消息、定时任务、CMS、微信等最常用功能，使其具有上手容易、开发便捷、扩展灵活等特性，特别适合各类大中小型定制化项目需求。
+
+* **历史悠久**：开源近十年时间从V1-V8数次迭代，紧跟技术发展和企业应用需求，支持电子政务、电子商务、物联网、车联网等各类应用场景。
+* **开源免费**：V8前后端所有代码完全开源免费，当然也期望获得捐赠，您的捐赠是框架持续发展的动力（注：接受付费的定制开发和企业开发培训）。
+* **极易上手**：虽然V4、V6走过弯路，但作者始终坚持“在力所能及的情况下，最大限度的提高Web开发人员的生产力”，V8框架的架构简单、功能完善、学习成本低、自学或简单培训即可上手。
+* **版本丰富**：V8后端提供单应用和分布式版本以供选择，两个版本功能完全一致，都支持war包部署和jar包部署，分布式版本基于 Nacos、Dubbo；V8前端提供 Vue2 + ElmentUI 和 Vue3 + Elemnt-Plus + TypeScript 两个版本以供选择。
+
 ## 前言
 本文档将引导您一步步使用本框架搭建一个后台管理系统，并在此基础上做二次开发。
 
@@ -21,7 +33,7 @@ BudWk Java后端是基于 NutzBoot 开发的微服务分布式框架，NutzBoot 
 
 ## 技术架构
 
-BudWk-V7 采用目前流行的网关 + API + 前后端分离的架构，后端人员只需开发API，前端人员只需根据API文档开发页面效果，如果您的项目团队人员 `Java > 1 and Vue > 1` 那么开发效率会有较大提升，如果是一个人全栈，会比较累……
+BudWk-V8/V7 采用目前流行的网关 + API + 前后端分离的架构，后端人员只需开发API，前端人员只需根据API文档开发页面效果，如果您的项目团队人员 `Java > 1 and Vue > 1` 那么开发效率会有较大提升，如果是一个人全栈，会比较辛苦……
 
 ![framework](../../images/base/framework.jpg)
 
@@ -41,7 +53,15 @@ Quartz | 作业调度框架  | [https://www.quartz-scheduler.org](https://www.qu
 IdGenerator | 雪花主键生成  | [https://github.com/yitter/IdGenerator](https://github.com/yitter/IdGenerator)
 Hutool | 工具集合  | [https://hutool.cn](https://hutool.cn)
 
-### 前端技术
+### Vue3前端技术 (wk-vue3-admin)
+技术 | 名称 | 官网
+----|------|----
+Vue3 | MVVM框架 | [https://vuejs.org](https://vuejs.org)
+Vite | 应用框架 | [https://vitejs.dev](https://vitejs.dev)
+Element-Plus | 基于Vue3的UI框架 | [https://element-plus.gitee.io/zh-CN](https://element-plus.gitee.io/zh-CN/)
+Font-awesome | 字体图标  | [https://fontawesome.com](https://fontawesome.com)
+
+### Vue2前端技术 (wk-vue-admin)
 技术 | 名称 | 官网
 ----|------|----
 Vue.js | MVVM框架 | [https://vuejs.org](https://vuejs.org)
@@ -55,11 +75,13 @@ Font-awesome | 字体图标  | [https://fontawesome.com](https://fontawesome.com
 budwk                               -- 根目录
 │  ├─wk-starter                     -- 组件中心
 │  │  ├─wk-starter-common           -- 通用类组件
+│  │  ├─wk-starter-apiauth          -- API签名验证组件
 │  │  ├─wk-starter-database         -- 数据库组件
-│  │  ├─wk-starter-config           -- 配置组件(商业版)
+│  │  ├─wk-starter-config           -- 配置组件
 │  │  ├─wk-starter-dependencies     -- Jar依赖及版本号
 │  │  ├─wk-starter-dubbo            -- Dubbo组件
 │  │  ├─wk-starter-email            -- Email组件
+│  │  ├─wk-starter-excel            -- Excel导入导出组件
 │  │  ├─wk-starter-gateway          -- 网关组件
 │  │  ├─wk-starter-job              -- 简易定时任务组件
 │  │  ├─wk-starter-log              -- 日志及SLog组件
@@ -69,7 +91,7 @@ budwk                               -- 根目录
 │  │  ├─wk-starter-storage          -- 文件存储组件
 │  │  ├─wk-starter-web              -- WEB拦截跨越表单验证组件
 │  ├─wk-gateway                     -- 网关中心
-│  │  ├─websocket                   -- WebScoket支持(商业版)
+│  │  ├─websocket                   -- WebScoket支持
 │  ├─wk-platform                    -- 控制中心
 │  │  ├─wk-platform-common          -- 通用类供其他模块调用
 │  │  ├─wk-platform-server          -- 服务类提供API及RPC服务
@@ -77,14 +99,11 @@ budwk                               -- 根目录
 │  ├─wk-cms                         -- CMS管理
 │  │  ├─wk-cms-common               -- 通用类供其他模块调用
 │  │  ├─wk-cms-server               -- 服务类提供API及RPC服务
-│  ├─wk-wechat                      -- 微信管理(商业版)
-│  │  ├─wk-wechat-common            -- 通用类供其他模块调用(商业版)
-│  │  ├─wk-wechat-server            -- 服务类提供API及RPC服务(商业版)
-│  ├─wk-vue-admin                   -- Vue前端代码
-│  │  ├─pages-home                  -- 消息中心
-│  │  ├─pages-platform              -- 控制中心
-│  │  ├─pages-cms                   -- CMS管理
-│  │  ├─pages-wechat                -- 微信管理(商业版)
+│  ├─wk-wechat                      -- 微信管理
+│  │  ├─wk-wechat-common            -- 通用类供其他模块调用
+│  │  ├─wk-wechat-server            -- 服务类提供API及RPC服务
+│  ├─wk-vue-admin                   -- Vue2前端代码
+│  ├─wk-vue3-admin                   -- Vue3前端代码
 │  ├─wk-mini                        -- Mini单应用版本(一个jar启动无需nacos)
 ```
 
@@ -106,7 +125,7 @@ budwk                               -- 根目录
   - 系统参数 `公共参数、各应用参数的配置管理`
   - 数据字典 `公共数据字典、各应用数据字典的管理`
   - 密钥管理 `为API预留的密钥管理(API Sign -> API Token -> USER Token)`
-  - 账户安全 `密码规则、密码重试次数、密码是否过期等配置(商业版)、验证码设置(商业版)`
+  - 账户安全 `密码规则、密码重试次数、密码是否过期等配置、验证码设置`
 - 运维管理
   - 服务列表 `查看在Nacos上注册的Dubbo服务或网关服务状态`
   - 服务器监控 `查看服务器CPU/内存/网络/Redis/Jvm等占用情况(当前仅支持单机部署)`
@@ -116,9 +135,9 @@ budwk                               -- 根目录
 - 用户登录
   - 通过用户名 + 密码登录
   - 通过手机号 + 短信验证码登录
-  - SSO单点登录(商业版)
-  - RSA前端密码加密(商业版)
-  - 第三方QQ、微信、支付宝登录(商业版)
+  - SSO单点登录
+  - RSA前端密码加密
+  - 第三方QQ、微信、支付宝登录
 - 用户注册
   - 通过手机号 + 短信验证码注册
 - 找回密码
@@ -134,7 +153,7 @@ budwk                               -- 根目录
   - 链接管理 
   - Banner管理
     
-### WeChat(商业版)
+### WeChat
 
 - 微信会员 `会员资料查看、首次需手动同步会员资料`
 - 消息管理

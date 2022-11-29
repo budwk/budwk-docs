@@ -45,7 +45,7 @@
 
 * 手机号码与用户名一致现在比较普及，系统默认以手机号码后六位做登录密码
 
-* V7商业版中可通过`账户安全设置` 设置用户登录时是否需强制修改默认密码
+* V7/V8 中可通过`账户安全设置` 设置用户登录时是否需强制修改默认密码
 
 * 可将多个角色分配给用户，如系统公共角色、公司或分公司所属角色
 
@@ -102,9 +102,22 @@
 
 * 前端主要通过封装的 `v-permission` 判断权限，控制页面组件是否显示
 
+
+vue2
 ```vue
 <el-button
           v-permission="'sys.manage.menu.create'"
+          size="small"
+          type="primary"
+          @click="openAdd"
+        >
+        创建菜单
+</el-button>
+```
+vue3
+```vue
+<el-button
+          v-permission="['sys.manage.menu.create']"
           size="small"
           type="primary"
           @click="openAdd"

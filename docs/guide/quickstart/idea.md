@@ -22,7 +22,7 @@
 
 ```yaml
 jdbc:
-  url: jdbc:mysql://127.0.0.1:3306/budwk_v7?useUnicode=true&characterEncoding=utf8&useSSL=false
+  url: jdbc:mysql://127.0.0.1:3306/budwk_v8?useUnicode=true&characterEncoding=utf8&useSSL=false
   username: root
   password: root
 ```

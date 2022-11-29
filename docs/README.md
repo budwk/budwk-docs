@@ -12,7 +12,7 @@ footer: MIT Licensed | 2021-present © budwk.com
 <div class="features">
   <div class="feature">
     <h2>简单快捷</h2>
-    <p>基于 NutzBoot 和 Nuxt + Vue + ElementUI 快速构建 Web应用系统</p>
+    <p>基于 NutzBoot 和 Vue3 + Element-Plus + TypeScript + Vite 快速构建 Web应用系统</p>
   </div>
   <div class="feature">
     <h2>功能完善</h2>
