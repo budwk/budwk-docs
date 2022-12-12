@@ -6,15 +6,15 @@
 ## 运行环境
 
 *   JDK 11 + 或 OpenJDK 11 +
-*   Redis 4.0.8 +
+*   Redis 4.x/6.x +
 *   MariaDB 10+、MySql 5.7+、Oracle、SqlServer、达梦等
 *   Nacos 2.0.3 +
 
 ## 开发工具
 *   IntelliJ IDEA `开源项目作者可申请免费序列号证书`
 *   Visual Studio Code
-*   Node 12.13.0 +
-*   Maven 3.6.3 +
+*   Node 16.x/18.x/19.x +
+*   Maven 3.x +
 *   Git
 
 ## JDK 安装配置
@@ -245,33 +245,14 @@ git status                  #查看状态
 
 * Index of /dist [https://nodejs.org/dist/](https://nodejs.org/dist/)
 
-* 找到 `v12.22.5`，下载 `node-v12.22.5-win-x64.zip` 文件，进行安装
+* 找到 `v19.2.0`，下载 `node-v19.2.0-win-x64.zip` 文件，进行安装
 
-* 前端项目 `wk-vue-admin` 兼容 Node.js `v12.x` `v14.x` 版本，更高版本请自行测试
+* 前端 Vue3 项目 `wk-vue3-admin` 兼容 Node.js `v16.x` `v18.x` `v19.x`  版本，更高版本请自行测试
 
-* 命令行执行 `npm install -g yarn`，安装 `yarn` 包管理工具
+* 命令行执行 `npm install -g pnpm`，安装 `pnpm` 包管理工具
 
 * 将包的源改为阿里源，提升包下载速度
 
 ```text
 npm install -g mirror-config-china --registry=https://registry.npm.taobao.org
-```
-
-## Python 安装配置
-
-* 前端项目中使用到 `node-sass` ，需要 python2 运行环境
-
-#### 下载 Python 2.7.x
-
-* Windows X86-64 MSI Installer (2.7.18) [https://www.python.org/downloads/release/python-2718/](https://www.python.org/downloads/release/python-2718/)
-
-* 默认安装，环境变量 `path` 中加入 python 安装路径和 `Scripts`，如 `C:\Python27` 和 `C:\Python27\Scripts`
-
-* 命令行输入 `python` 命令，若输出版本号则安装正确
-
-```text
-C:\Users\Wizzer>python
-Python 2.7.18 ...
-Type "help", "copyright", "credits" or "license" for more information.
->>>
 ```

@@ -1,6 +1,20 @@
 # 初始化设置
 
-## Nacos 设置
+## 单应用版本
+
+### MariaDB 设置
+
+* 见环境搭建 MariaDB 章节，连接数据库
+
+* 创建名为 `budwk_v8` 的空数据库，字符集选择 `utf8mb4`
+
+* 注意：项目启动时会自动创建表结构和初始化数据，不用手动导入sql
+
+![mariadb01](../../images/quickstart/mariadb01.png)
+
+## 分布式版本
+
+### Nacos 设置
 
 * 见环境搭建 Nacos 章节，启动 Nacos
 
@@ -12,12 +26,12 @@
 
 ![nacos01](../../images/quickstart/nacos01.png)
 
-## MariaDB 设置
+### MariaDB 设置
 
 * 见环境搭建 MariaDB 章节，连接数据库
 
-* 创建名为 `budwk_v8` 的空数据库
-  
+* 创建名为 `budwk_v8` 的空数据库，字符集选择 `utf8mb4`
+
 * 注意：项目启动时会自动创建表结构和初始化数据，不用手动导入sql
 
 ![mariadb01](../../images/quickstart/mariadb01.png)

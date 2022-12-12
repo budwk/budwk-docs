@@ -1,6 +1,12 @@
 # 项目启动
 
-## Java 后端启动
+## 单应用版本
+
+* 找到 `WkMiniLauncher.java` 鼠标右击运行
+
+![java04](../../images/quickstart/java05.png)
+
+## 分布式版本
 
 * 启动顺序 `wk-platform` -> `wk-ucenter` -> `wk-gateway` -> `其他模块`
 
@@ -16,17 +22,17 @@
 
 ![java04](../../images/quickstart/java04.png)
 
-## Vue 前端启动
+## Vue3 前端启动
 
 
-* 打开命令行，切换到 `wk-vue-admin` 目录下执行 `npm run dev` 或 `yarn run dev` 命令
+* 打开命令行，切换到 `wk-vue3-admin` 目录下执行 `pnpm run dev` 命令
 
 ```text
-D:\java\budwk\wk-vue-admin>yarn run dev
+D:\java\budwk\wk-vue3-admin>pnpm run dev
 ```
 
 ![node01](../../images/quickstart/node01.png)
 
-* 启动完成后，浏览器访问 [http://127.0.0.1:8800](http://127.0.0.1:8800) 即可登录管理后台
+* 启动完成后，浏览器访问 [http://127.0.0.1:1818](http://127.0.0.1:1818) 即可登录管理后台
 
 ![node02](../../images/quickstart/node02.png)

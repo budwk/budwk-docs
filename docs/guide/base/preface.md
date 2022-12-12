@@ -61,14 +61,6 @@ Vite | 应用框架 | [https://vitejs.dev](https://vitejs.dev)
 Element-Plus | 基于Vue3的UI框架 | [https://element-plus.gitee.io/zh-CN](https://element-plus.gitee.io/zh-CN/)
 Font-awesome | 字体图标  | [https://fontawesome.com](https://fontawesome.com)
 
-### Vue2前端技术 (wk-vue-admin)
-技术 | 名称 | 官网
-----|------|----
-Vue.js | MVVM框架 | [https://vuejs.org](https://vuejs.org)
-Nuxt.js | Vue通用应用框架 | [https://nuxtjs.org](https://nuxtjs.org)
-ElementUI | 基于Vue的UI框架 | [https://element.eleme.io](https://element.eleme.io)
-Font-awesome | 字体图标  | [https://fontawesome.com](https://fontawesome.com)
-
 ## 目录结构
 
 ```lua

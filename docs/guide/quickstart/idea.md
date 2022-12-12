@@ -1,6 +1,16 @@
-# 项目设置
+# 后端开发设置
 
-## IDEA 打开项目
+## 单应用版本
+
+* 使用 `IDEA -> File -> Open` 打开`wk-mini`，如 `D://java/budwk/wk-mini`
+
+![idea01](../../images/quickstart/idea01.png)
+
+* 如未自动加载 maven 项目，可在 `pom.xml` 文件上鼠标右击，选择 `Add as Maven Project`
+
+## 分布式版本
+
+### IDEA 打开项目
 
 * 使用 `IDEA -> File -> Open` 打开项目根目录，如 `D://java/budwk`
 
@@ -14,7 +24,7 @@
 
 ![idea02](../../images/quickstart/idea02.png)
 
-## 项目配置文件
+### 项目配置文件
 
 * 如果您的 Nacos 与 MariaDB 不是在本机运行，请通过 IDEA 搜索 `127.0.0.1`，修改 `application.yaml` 为实际的IP地址和端口号
 
@@ -26,7 +36,7 @@ jdbc:
   username: root
   password: root
 ```
-* Nacos 服务发现、配置中心、Dubbo服务注册相关地址配置
+* Nacos 服务发现、配置中心、Dubbo服务注册相关地址配置（示例）
 
 
 ```yaml

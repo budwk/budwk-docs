@@ -1,6 +1,5 @@
 # 依赖安装
 
-
 ## Maven 依赖安装
 
 * 打开命令行，切换到 `wk-starter` 目录下执行 `mvn install` 命令
@@ -26,12 +25,12 @@ D:\java\budwk\wk-platform>mvn install
 
 ## Node 依赖安装
 
-* 打开命令行，切换到 `wk-vue-admin` 目录下执行 `npm install` 或 `yarn install` 命令
+* 打开命令行，切换到 `wk-vue3-admin` 目录下执行 `npm i` 或 `pnpm i` 命令
 
 ```text
-D:\java\budwk>cd wk-vue-admin
+D:\java\budwk>cd wk-vue3-admin
 
-D:\java\budwk\wk-vue-admin>yarn install
+D:\java\budwk\wk-vue3-admin>pnpm i
 ```
 
 ![install02](../../images/quickstart/install02.png)
