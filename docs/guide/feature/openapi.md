@@ -1,8 +1,12 @@
 # 接口文档
 
-* V7/V8 构建了一套注解用来生成 `Swagger3(OpenAPI)` API文档，同时商业版复用了这套注解来实现后端表单验证功能
+* V7/V8 构建了一套注解用来生成 `Swagger3(OpenAPI)` API文档，同时通过这套注解来实现后端表单验证功能
 
 * 引入 `wk-starter-openapi` 组件，控制类方法上定义API，在微服务启动时会自动生成API文档
+
+* `wk-mini` Mini版本访问 API文档路径为 `http://127.0.0.1:9900/openapi/#/load/openapi.json`
+* 分布式版本访问 API文档路径，要加微服务模块的前缀，如 `http://127.0.0.1:9900/platform/openapi/#/load/openapi.json`
+* 调试时需填写 `wk-user-token`，登录系统后可以在控制台请求路径的 `Request Headers` 中找到
 
 ```yaml
 openapi:
@@ -13,7 +17,7 @@ openapi:
     package: com.budwk.test
   info:
     # 文档标题
-    title: BudWk V7 API
+    title: BudWk V8 API
     # 文档版本
     version: 1.0.0
     # 作者信息
@@ -28,16 +32,11 @@ openapi:
       description: 演示环境
     # 请求头默认参数,无需修改
   headers:
-    - value: X-Token
+    - value: wk-user-token
       name: 用户Token
       in: header
       required: true
 ```
-
-* `控制中心[接口文档]` [https://demo.budwk.com/api/platform/openapi/](https://demo.budwk.com/api/platform/openapi/#/load/openapi.json)
-  
-* `Ucenter[接口文档]` [https://demo.budwk.com/api/ucenter/openapi/](https://demo.budwk.com/api/ucenter/openapi/#/load/openapi.json)
-
 
 ```java
 
@@ -53,7 +52,7 @@ public class AuthController {
 
     @At
     @Ok("json")
-    // GET POST 必须定义
+    // GET/POST/DELETE 请求方法必须定义
     @GET
     // 接口定义
     @ApiOperation(name = "获取验证码", description = "图形验证码")

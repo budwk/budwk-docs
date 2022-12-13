@@ -56,70 +56,37 @@ public class PubFileController {
 
 ## 前端上传组件
 
-* 使用 ElementUI 文件上传组件，在请求头传递 `X-Token` 以便后端进行权限判断
+* 使用 ElementUI 文件上传组件，在请求头传递 `wk-user-token` 以便后端进行权限判断
 
 ```vue
-<el-upload
-                    :action="uploadUrl"
-                    :headers="headers"
-                    name="Filedata"
-                    limit:1
-                    :before-upload="beforeFileUpload"
-                    :show-file-list="false"
-                    :on-success="handleUploadSuccess"
-                  >
-    <el-button
-        icon="el-icon-upload"
-        size="small"
-    >上传头像</el-button>
-</el-upload>
+                <el-upload action="#" :on-change="upload" :show-file-list="false"
+                    :before-upload="beforeUpload">
+                    <el-button>
+                        选择
+                        <el-icon class="el-icon--right">
+                            <Upload />
+                        </el-icon>
+                    </el-button>
+                </el-upload>
 ```
 
-```java
-<script>
-import { API_UPLOAD_IMAGE } from '@/constant/api/platform/pub/upload'
-import {
-  API_HOME_USER_SET_AVATAR
-} from '@/constant/api/home/home'
-export default {
-    data() {
-        return {
-            headers: {
-                // 在header传递token用于后台权限验证
-                'X-Token': this.$cookies.get('X-Token') 
-            },
-            uploadUrl: process.env.API + API_UPLOAD_IMAGE, // 图片上传路径
-            avatar: ''
-        }
-    },
-    methods: {
-        // 文件上传成功后进行保存
-        handleUploadSuccess(resp, file) {
-            var file_url = resp.data.url
-            this.$axios
-            .$post(API_HOME_USER_SET_AVATAR, { avatar: file_url })
-            .then((d) => {
-                if (d.code === 0) {
-                    this.$message.success(d.msg)
-                    this.avatar = this.conf.AppFileDomain + file_url
-                }
-            })
-        },
-        // 上传之前判断文件格式及大小
-        beforeFileUpload(file) {
-            var isJPG = file.type === 'image/jpeg'
-            var isPNG = file.type === 'image/png'
-            if (!isJPG && !isPNG) {
-                this.$message.error('头像图片格式不正确')
-                return false
-            }
-            var isLt500k = file.size / 1024 <= 500
-            if (!isLt500k) {
-                this.$message.error('头像图片需小于500KB')
-                return false
-            }
-            return true
-        }
+```javascript
+import { fileUpload } from '/@/api/common'
+
+/** 上传预处理 */
+const beforeUpload = (file: any) => {
+    if (file.type.indexOf("image/") == -1) {
+        modal.msgError("文件格式错误，请上传图片类型,如：JPG，PNG后缀的文件。")
     }
+}
+/** 上传图片 */
+const upload = (file: any) => {
+    let formData = new FormData()
+    formData.append('Filedata', file.raw)
+    fileUpload(formData,{},'image').then((res) => {
+        if (res.code == 0) {
+            console.log(res.data)
+        }
+    })
 }
 ```

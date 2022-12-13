@@ -74,9 +74,9 @@
 
 ## 登录过程
 
-* 用户在登录页输入用户名及密码后，`wk-ucenter` 会先进行验证码校验，校验通过后RPC调用 `wk-platform` 接口判断用户名及密码是否正确
+*  用户在登录页输入用户名及密码后，[分布式版本] `wk-ucenter` 会先进行验证码校验，校验通过后RPC调用 `wk-platform` 接口判断用户名及密码是否正确
 
-* 用户名及密码验证正确，`wk-platform` 则返回`角色代码`和`权限标识`集合数据，由`wk-ucenter`中的`sa-token` 缓存`角色代码`和`权限标识`并生成 `token`
+* 用户名及密码验证正确，返回`角色代码`和`权限标识`集合数据，由`sa-token` 缓存`角色代码`和`权限标识`并生成 `token`
   
 * `wk-ucenter` 将 `用户信息`、`菜单和权限`、`token`等信息返回给前端
 
@@ -103,17 +103,6 @@
 * 前端主要通过封装的 `v-permission` 判断权限，控制页面组件是否显示
 
 
-vue2
-```vue
-<el-button
-          v-permission="'sys.manage.menu.create'"
-          size="small"
-          type="primary"
-          @click="openAdd"
-        >
-        创建菜单
-</el-button>
-```
 vue3
 ```vue
 <el-button

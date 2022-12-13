@@ -84,7 +84,8 @@ module.exports = {
                         '/guide/feature/sms',
                         '/guide/feature/email',
                         '/guide/feature/file',
-                        '/guide/feature/openapi'
+                        '/guide/feature/openapi',
+                        '/guide/feature/validation'
                     ]
                 },
                 {

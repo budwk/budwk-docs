@@ -64,25 +64,25 @@ server {
 
     gzip_static on;
 
-        # 前端
+    # 前端
 	location / {
            root    /data/v8/dist;
            try_files $uri /index.html;
            index  index.html;
-        }
+    }
 
-        # 本地上传文件
+    # 本地上传文件
 	location /upload/ {
 	   alias /data/files/upload;	   
 	}
 
-        error_page 405 =200 $uri; 
+    error_page 405 =200 $uri; 
 
 	location @router {
            rewrite ^.*$ /index.html last;
-        }
+    }
     
-        # 后端请求代理
+    # 后端请求代理
 	location ^~ /api/ {
 		proxy_pass http://demo_server/;
 		proxy_redirect off;
@@ -92,7 +92,7 @@ server {
 		client_max_body_size  30M;
 	}
         
-        # websocket代理
+    # websocket代理
 	location ^~ /websocket {
 		proxy_pass http://demo_server/websocket;
 		proxy_redirect    off;
