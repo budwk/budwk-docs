@@ -52,7 +52,7 @@ public class AuthController {
 
     @At
     @Ok("json")
-    // GET/POST/DELETE 请求方法必须定义
+    // 请求方法必须定义 @GET/@POST/@DELETE 
     @GET
     // 接口定义
     @ApiOperation(name = "获取验证码", description = "图形验证码")
@@ -76,3 +76,10 @@ public class AuthController {
 }
 
 ```
+
+* `GET/DELETE` 请求传参，使用 `@ApiImplicitParams` 及 `@ApiImplicitParam` 定义
+
+* `POST` 请求，使用 `@ApiFormParams` 及 `@ApiFormParam` 定义
+
+* 实体类使用 `@ApiModel` 及 `@ApiModelProperty` 定义
+
