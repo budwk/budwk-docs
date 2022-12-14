@@ -28,8 +28,8 @@ BudWk Java后端是基于 NutzBoot 开发的微服务分布式框架，NutzBoot 
 ## 演示地址
 
 * `管理后台` [https://demo.budwk.com](https://demo.budwk.com)
-* `控制中心[接口文档]` [https://demo.budwk.com/api/platform/openapi/](https://demo.budwk.com/api/platform/openapi/#/load/openapi.json)
-* `Ucenter[接口文档]` [https://demo.budwk.com/api/ucenter/openapi/](https://demo.budwk.com/api/ucenter/openapi/#/load/openapi.json)
+* `接口文档[单应用版本]` [https://demo.budwk.com/api/openapi/](https://demo.budwk.com/api/openapi/#/load/openapi.json)
+* `接口文档[分布式版本]` `/api/` + `模块名` + `/openapi/`
 
 ## 技术架构
 

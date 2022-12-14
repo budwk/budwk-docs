@@ -93,9 +93,7 @@ module.exports = {
                     collapsable: false,
                     children: [
                         '/guide/action/cache',
-                        '/guide/action/validator',
                         '/guide/action/snowflake',
-                        '/guide/action/develop',
                         '/guide/action/deploy',
                         '/guide/action/starter'
                     ]
