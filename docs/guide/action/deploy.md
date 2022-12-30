@@ -9,6 +9,10 @@
 * 将 `target/wk-mini.jar` 上传至服务器 `/data/v8/` 文件夹
 * `nohup java -jar wk-mini.jar >/dev/null 2>&1 & ` 后端运行
 
+
+* 指定jar中配置文件运行 `nohup java -jar -Dnutz.profiles.active=pro -Xmx450m wk-mini.jar >/dev/null 2>&1 &`
+* 加载文件夹中配置文件运行 `nohup java -jar -Dnutz.boot.configure.yaml.dir=/data/budwk/ -Xmx450m wk-mini.jar >/dev/null 2>&1 &`
+
 ## Nginx配置
 
 

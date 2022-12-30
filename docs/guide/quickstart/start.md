@@ -4,7 +4,11 @@
 
 * 找到 `WkMiniLauncher.java` 鼠标右击运行
 
-![java04](../../images/quickstart/java05.png)
+![java05](../../images/quickstart/java05.png)
+
+* 编辑启动项目，可通过命令行参数 `--nutz.profiles.active=dev` 指定加载 `application-dev.yaml` 配置文件
+
+![java06](../../images/quickstart/java06.png)
 
 ## 分布式版本
 
