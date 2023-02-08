@@ -21,7 +21,7 @@ V8 在 V7具备的API网关、组件库、认证中心、控制中心等功能�
 ## 前言
 本文档将引导您一步步使用本框架搭建一个后台管理系统，并在此基础上做二次开发。
 
-BudWk Java后端是基于 NutzBoot 开发的微服务分布式框架，NutzBoot 是在 Nutz 基础上的 boot 化封装，所以在开始之前，**请确保已详细阅读并掌握 Nutz 基础知识**:stuck_out_tongue:
+BudWk Java后端是基于 NutzBoot 开发的微服务分布式框架，NutzBoot 是在 Nutz 基础上的 boot 化封装，如需深入了解底层运行机制可**详细阅读 Nutz 基础知识**:stuck_out_tongue:
 
 * [http://nutzam.com/core/nutz_preface.html](http://nutzam.com/core/nutz_preface.html)
 
