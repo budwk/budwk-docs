@@ -26,7 +26,8 @@ module.exports = {
                     {
                         text: "项目", items: [
                             {text: '代码生成器(IDEA插件)', link: 'https://github.com/budwk/budwk-codegenerator'},
-                            {text: 'OpenAPI V3.0查看器', link: 'https://github.com/budwk/budwk-openapi-viewer'}
+                            {text: 'OpenAPI V3.0查看器', link: 'https://github.com/budwk/budwk-openapi-viewer'},
+                            {text: 'Vue3表单设计器', link: 'https://github.com/budwk/budwk-vform3'}
                         ]
                     },                    {
                         text: "其他源码", items: [
