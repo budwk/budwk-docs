@@ -19,6 +19,7 @@ module.exports = {
             {text: '开发指南', link: '/guide/base/preface'},
             {text: 'V5演示', link: 'https://nutzwk.wizzer.cn'},
             {text: 'V8演示', link: 'https://demo.budwk.com'},
+            {text: 'IOT平台', link: 'https://budiot.com'},
             {
                 text: '生态系统',
                 items: [
