@@ -13,3 +13,6 @@ BudWk 开发指南
 `export NODE_OPTIONS=--openssl-legacy-provider`
 
 `yarn docs:build`
+
+
+test pull request
