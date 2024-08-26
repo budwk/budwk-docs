@@ -1,15 +1,20 @@
 # budwk-docs
 BudWk 开发指南
 
+# Install
+
+`npm i`
 
 # Dev
 
 `export NODE_OPTIONS=--openssl-legacy-provider`
 
-`yarn docs:dev`
+`npm run docs:dev`
 
 # Build
 
 `export NODE_OPTIONS=--openssl-legacy-provider`
 
-`yarn docs:build`
+`cd docs`
+
+`npm run docs:build`

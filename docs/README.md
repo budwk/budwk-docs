@@ -2,7 +2,7 @@
 home: true
 actionText: 快速开始 →
 actionLink: /guide/base/preface
-footer: MIT Licensed | 2021-present © budwk.com | 皖ICP备15001937号-4
+footer: MIT Licensed | 2021-present © budwk.com | 皖ICP备15001937号-4 | 软著登记号 2023SR0656701
 ---
 
 <div style="text-align: center">
