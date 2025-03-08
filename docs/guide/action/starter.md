@@ -18,7 +18,7 @@
 ## wk-starter-database
 
 * 定义表的公共字段，如创建人ID、创建时间、修改人ID、修改时间、删除标记
-* 提供数据库增删改查公共方法，如 listPage(注意如返回 List<Record> 对象，Record 字段名都是小写字母)、listPageEntity
+* 提供数据库增删改查公共方法，如 listPage(注意如返回 List&lt;Record&gt; 对象，Record 字段名都是小写字母)、listPageEntity
 * 提供雪花主键功能
 
 ## wk-starter-dubbo
